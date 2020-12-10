@@ -45,7 +45,7 @@
                   class="site-nav--dropdown-grandchild"
                   data-meganav-dropdown>
                   {% for grandchildlink in childlink.links %}
-                    <li{% if grandchildlink.active %} class="site-nav--active"{% endif %}>
+                    <li {% if grandchildlink.active %} class="site-nav--active"{% endif %}>
                       <a
                         href="{{ grandchildlink.url }}"
                         class="site-nav--link"
@@ -56,10 +56,11 @@
                         </a>
                     </li>
                   {% endfor %}
+                  <li><a href="#">Test Link</a></li>
                 </ul>
               </li>
             {% else %}
-              <li{% if childlink.active %} class="site-nav--active"{% endif %}>
+              <li {% if childlink.active %} class="site-nav--active"{% endif %}>
                 <a
                   href="{{ childlink.url }}"
                   class="site-nav--link"
@@ -74,7 +75,7 @@
         </ul>
       </li>
     {% else %}
-      <li{% if link.active %} class="site-nav--active"{% endif %}>
+      <li {% if link.active %} class="site-nav--active"{% endif %}>
         <a
           href="{{ link.url }}"
           class="site-nav--link"
